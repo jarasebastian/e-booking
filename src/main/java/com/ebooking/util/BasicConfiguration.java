@@ -30,7 +30,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-		auth.inMemoryAuthentication().withUser("seba").password(encoder.encode("ebooking")).roles("USER");
+		auth.inMemoryAuthentication().withUser("admin").password(encoder.encode("ebooking")).roles("USER");
 	}
 
 	@Override
